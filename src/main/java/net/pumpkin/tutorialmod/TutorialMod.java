@@ -2,6 +2,7 @@ package net.pumpkin.tutorialmod;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.pumpkin.tutorialmod.block.ModBlocks;
+import net.pumpkin.tutorialmod.item.ModCreativeModeTabs;
 import net.pumpkin.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -37,6 +38,7 @@ public class TutorialMod {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
